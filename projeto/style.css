@@ -1,0 +1,297 @@
+/* Estilos Globais */
+
+/* Estilos para o corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte para o corpo do documento */
+    margin: 0; /* Remove as margens padrão */
+    padding: 0; /* Remove o preenchimento padrão */
+    box-sizing: border-box; /* Define o modelo de caixa para incluir o preenchimento e a borda no cálculo da largura e altura */
+    background-color: #666363; /* Define a cor de fundo do corpo */
+}
+
+/* Estilos para o cabeçalho */
+header {
+    background-color: #333; /* Define a cor de fundo do cabeçalho */
+    color: white; /* Define a cor do texto no cabeçalho */
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+}
+
+/* Estilos para o título principal */
+h1{
+    margin-left: 25px; /* Define a margem esquerda do título principal */
+}
+
+/* Estilos para a parte verde do título principal */
+.span-logo{
+    color: #45a049; /* Define a cor do texto */
+}
+
+/* Estilos para o ícone no título principal */
+h1 .material-symbols-outlined{
+    font-size: 35px; /* Define o tamanho da fonte */
+}
+
+/* Estilos para os botões no cabeçalho */
+.header-buttons {
+    display: flex; /* Usa flexbox para layout */
+    gap: 10px; /* Define o espaçamento entre os botões */
+}
+
+.header-buttons button {
+    padding: 10px 20px; /* Define o preenchimento do botão */
+    border: none; /* Remove a borda do botão */
+    background-color: #28a745; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border-radius: 5px; /* Define o raio da borda do botão */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+}
+
+/* Contêiner Principal */
+.container {
+    display: flex; /* Usa flexbox para layout */
+    flex-direction: column; /* Define a direção dos elementos como coluna */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    padding: 20px; /* Adiciona preenchimento ao contêiner */
+}
+
+
+/* Barra de Pesquisa */
+.search-bar {
+    margin-bottom: 20px; /* Define a margem inferior da barra de pesquisa */
+    width: 100%; /* Define a largura da barra de pesquisa */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente os elementos dentro da barra de pesquisa */
+}
+
+.search-bar input[type="text"] {
+    padding: 10px 80px; /* Define o preenchimento do campo de texto da barra de pesquisa */
+    width: 300px; /* Define a largura do campo de texto */
+    border: 1px solid #ccc; /* Define a borda do campo de texto */
+    border-radius: 5px; /* Define o raio da borda do campo de texto */
+}
+
+/* Álbuns */
+.albums {
+    display: grid; /* Usa grid para layout */
+    gap: 20px; /* Define o espaçamento entre os elementos */
+    width: 100%; /* Define a largura dos álbuns */
+    max-width: 1300px; /* Define a largura máxima dos álbuns */
+    margin-bottom: 20px; /* Define a margem inferior dos álbuns */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Define o layout responsivo dos álbuns */
+}
+
+.album {
+    border-radius: 5px; /* Define o raio da borda dos álbuns */
+    overflow: hidden; /* Define o comportamento de overflow */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.8); /* Adiciona sombra aos álbuns */
+    background-color: transparent; /* Define a cor de fundo dos álbuns */
+}
+
+.album-title {
+    display: flex; /* Usa flexbox para layout */
+    align-items: center; /* Alinha os itens verticalmente no centro */
+    justify-content: space-between; /* Distribui o espaço entre os itens */
+    padding: 5px; /* Adiciona preenchimento ao título do álbum */
+    text-align: center; /* Alinha o texto ao centro */
+    background-color: #333; /* Define a cor de fundo do título do álbum */
+}
+
+#albumsContainer {
+    color: #ffffff; /* Define a cor do texto */
+    font-weight: bolder; /* Define o peso da fonte */
+    font-size: 13px; /* Define o tamanho da fonte */
+}
+
+.album-content {
+   
+    padding: 10px; /* Adiciona preenchimento ao conteúdo do álbum */
+}
+
+.album .photos {
+    display: grid; /* Usa grid para layout */
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Define o layout responsivo das fotos */
+    gap: 10px; /* Define o espaçamento entre as fotos */
+    padding: 50px; /* Adiciona preenchimento às fotos */
+}
+
+.photo {
+    position: relative; /* Define a posição relativa das fotos */
+    overflow: hidden; /* Define o comportamento de overflow */
+    border-radius: 5px; /* Define o raio da borda das fotos */
+}
+
+
+.photo img {
+    display: flex; /* Define a exibição da imagem como bloco */
+    width: 100%; /* Define a largura da imagem como 100% */
+    height: auto; /* Define a altura da imagem como automática para manter a proporção */
+}
+
+.photo .delete-btn {
+    position: absolute; /* Define a posição absoluta do botão de exclusão */
+    top: 5px; /* Define a distância do topo */
+    right: 5px; /* Define a distância da direita */
+    background-color: red; /* Define a cor de fundo do botão de exclusão */
+    color: white; /* Define a cor do texto do botão de exclusão */
+    border: none; /* Remove a borda do botão de exclusão */
+    border-radius: 50%; /* Define o raio da borda do botão de exclusão */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+    padding: 5px; /* Adiciona preenchimento ao botão de exclusão */
+    font-size: 14px; /* Define o tamanho da fonte do botão de exclusão */
+}
+
+/* Tela Cheia */
+.fullscreen-overlay {
+    position: fixed; /* Define a posição fixa */
+    top: 0; /* Define a distância do topo */
+    left: 0; /* Define a distância da esquerda */
+    width: 100%; /* Define a largura como 100% */
+    height: 100%; /* Define a altura como 100% */
+    background-color: rgba(0, 0, 0, 0.8); /* Define a cor de fundo com transparência */
+    display: none; /* Esconde a sobreposição por padrão */
+    justify-content: center; /* Centraliza horizontalmente os elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    z-index: 100; /* Define a ordem de empilhamento */
+}
+
+.fullscreen-overlay img {
+    max-width: 90%; /* Define a largura máxima da imagem como 90% */
+    max-height: 90%; /* Define a altura máxima da imagem como 90% */
+}
+
+.fullscreen-overlay .close-btn {
+    position: absolute; /* Define a posição absoluta do botão de fechar */
+    top: 20px; /* Define a distância do topo */
+    right: 20px; /* Define a distância da direita */
+    background-color: red; /* Define a cor de fundo do botão de fechar */
+    color: white; /* Define a cor do texto do botão de fechar */
+    border: none; /* Remove a borda do botão de fechar */
+    border-radius: 5px; /* Define o raio da borda do botão de fechar */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+    padding: 10px; /* Adiciona preenchimento ao botão de fechar */
+    font-size: 28px; /* Define o tamanho da fonte do botão de fechar */
+}
+
+
+/* Botão Criar Álbum */
+#addAlbumBtn,
+#addPhotoBtn {
+    position: fixed; /* Define a posição fixa */
+    bottom: 20px; /* Define a distância do fundo */
+    right: 20px; /* Define a distância da direita */
+    width: 60px; /* Define a largura do botão */
+    height: 60px; /* Define a altura do botão */
+    background-color: #4CAF50; /* Define a cor de fundo do botão */
+    color: white; /* Define a cor do texto do botão */
+    border: none; /* Remove a borda do botão */
+    border-radius: 50%; /* Define o raio da borda do botão */
+    font-size: 30px; /* Define o tamanho da fonte do botão */
+    cursor: pointer; /* Define o cursor do mouse como ponteiro */
+    display: flex; /* Usa flexbox para layout */
+    justify-content: center; /* Centraliza horizontalmente os elementos */
+    align-items: center; /* Centraliza verticalmente os elementos */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.10); /* Adiciona sombra ao botão */
+    z-index: 1000; /* Define a ordem de empilhamento */
+}
+
+#addPhotoBtn {
+    bottom: 90px; /* Ajusta a posição do botão de adicionar foto */
+}
+
+#addAlbumBtn:hover,
+#addPhotoBtn:hover {
+    background-color: #45a049; /* Define a cor de fundo ao passar o mouse sobre os botões */
+}
+
+.delete-album-btn {
+    padding: 5px 5px; /* Adiciona preenchimento ao botão de excluir álbum */
+    background-color: #4CAF50; /* Define a cor de fundo do botão de excluir álbum */
+    color: #fff; /* Define a cor do texto do botão de excluir álbum */
+    border: none; /* Remove a borda do botão de excluir álbum */
+}
+
+.delete-album-btn:hover {
+    background-color: #45a049; /* Define a cor de fundo ao passar o mouse sobre o botão de excluir álbum */
+}
+
+/* Media Queries */
+@media (max-width: 1200px) {
+    /* Estilos para telas até 1200px de largura */
+    .albums {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* Ajusta o layout dos álbuns */
+    }
+}
+
+@media (max-width: 992px) {
+    /* Estilos para telas até 992px de largura */
+    .header-buttons button {
+        padding: 8px 16px; /* Ajusta o preenchimento dos botões no cabeçalho */
+    }
+
+
+    .delete-album-btn {
+        padding: 3px 6px; /* Ajusta o preenchimento do botão de excluir álbum */
+    }
+
+    .albums {
+        grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* Ajusta o layout dos álbuns */
+    }
+}
+
+@media (max-width: 768px) {
+    /* Estilos para telas até 768px de largura */
+    .header-buttons button {
+        padding: 6px 12px; /* Ajusta o preenchimento dos botões no cabeçalho */
+    }
+
+
+    .albums {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+    }
+
+    .album{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+    }
+}
+
+@media (max-width: 576px) {
+    /* Estilos para telas até 576px de largura */
+    header {
+        flex-direction: column; /* Altera a direção dos elementos no cabeçalho */
+        align-items: center; /* Centraliza horizontalmente os elementos no cabeçalho */
+    }
+
+    .header-buttons {
+        gap: 5px; /* Define o espaçamento entre os botões no cabeçalho */
+    }
+
+    .header-buttons button {
+        padding: 5px 10px; /* Ajusta o preenchimento dos botões no cabeçalho */
+    }
+
+    .search-bar input[type="text"] {
+        width: 100%; /* Define a largura da barra de pesquisa para ocupar toda a largura disponível */
+        max-width: 300px; /* Define a largura máxima da barra de pesquisa */
+    }
+
+    .albums {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Ajusta o layout dos álbuns */
+    }
+
+    #addAlbumBtn {
+        width: 50px; /* Define a largura do botão de adicionar álbum */
+        height: 50px; /* Define a altura do botão de adicionar álbum */
+        font-size: 24px; /* Define o tamanho da fonte do botão de adicionar álbum */
+    }
+
+    .delete-album-btn {
+        padding: 3px 6px; /* Ajusta o preenchimento do botão de excluir álbum */
+    }
+}

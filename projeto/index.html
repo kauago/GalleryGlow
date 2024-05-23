@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@40,400,0,0" />
+
+    <link rel="stylesheet" href="style.css">
+    <title>styleGalleryGlow</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>Gallery<span class="span-logo">Glow</span> <span class="material-symbols-outlined">photo_library</span></h1>
+        <div class="header-buttons">
+
+            <input type="file" id="photoInput" accept="image/*" style="display: none;" multiple>
+            <button id="addPhotoBtn"><span class="material-symbols-outlined">image</span></button>
+        </div>
+    </header>
+    <div class="container">
+        <div class="albums" id="albumsContainer">
+            <!-- Álbuns serão adicionados aqui -->
+        </div>
+    </div>
+
+    <div class="fullscreen-overlay" id="fullscreenOverlay">
+        <button class="close-btn" onclick="closeFullscreen()">Fechar</button>
+        <img id="fullscreenImage" src="">
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
